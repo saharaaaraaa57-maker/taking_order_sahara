@@ -1,0 +1,147 @@
+/* =========================================
+   nono SPACE — Design System
+   Palet: #E0708C, #F3A8BB, #623933, #FFF5F7, #FFFFFF
+   ========================================= */
+
+:root {
+    --c-primary:   #E0708C;
+    --c-secondary: #F3A8BB;
+    --c-accent:    #623933;
+    --c-soft:      #FFF5F7;
+    --c-surface:   #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+body {
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Brand logo baseline */
+.brand-logo       { height: 36px; width: auto; display: block; }
+.brand-logo--lg   { height: 56px; }
+.brand-logo--sm   { height: 28px; }
+
+/* Card standar (tanpa efek berlebihan) */
+.card {
+    background: var(--c-surface);
+    border: 1px solid rgba(243, 168, 187, 0.45);
+    border-radius: 12px;
+}
+.card-shadow {
+    box-shadow: 0 1px 2px rgba(98, 57, 51, 0.04),
+                0 4px 12px rgba(98, 57, 51, 0.06);
+}
+
+/* Input standar */
+.input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid rgba(243, 168, 187, 0.7);
+    border-radius: 10px;
+    background: var(--c-surface);
+    color: var(--c-accent);
+    font-size: 14px;
+    transition: border-color .15s, box-shadow .15s;
+}
+.input:focus {
+    outline: none;
+    border-color: var(--c-primary);
+    box-shadow: 0 0 0 3px rgba(224, 112, 140, 0.15);
+}
+.input-icon { padding-left: 38px; }
+
+/* Tombol utama */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color .15s, color .15s, border-color .15s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.btn-primary {
+    background: var(--c-primary);
+    color: var(--c-surface);
+}
+.btn-primary:hover { background: #cf5f7b; }
+.btn-secondary {
+    background: var(--c-surface);
+    border-color: rgba(98, 57, 51, 0.2);
+    color: var(--c-accent);
+}
+.btn-secondary:hover { background: var(--c-soft); }
+.btn-ghost {
+    background: transparent;
+    color: var(--c-accent);
+}
+.btn-ghost:hover { background: var(--c-soft); }
+
+/* Link brand */
+.link-brand {
+    color: var(--c-primary);
+    font-weight: 600;
+}
+.link-brand:hover { text-decoration: underline; }
+
+/* Table standar */
+.table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.table thead th {
+    background: var(--c-soft);
+    color: rgba(98, 57, 51, 0.65);
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.table tbody td {
+    padding: 14px 20px;
+    border-top: 1px solid rgba(243, 168, 187, 0.35);
+    vertical-align: middle;
+}
+.table tbody tr:hover { background: rgba(255, 245, 247, 0.6); }
+
+/* Badge status */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge--pending    { background: #FDF0F2; color: #B4455F; }
+.badge--diproses   { background: #FFF3E6; color: #A45A1F; }
+.badge--selesai    { background: #EDF7F0; color: #2F7A4D; }
+.badge--dibatalkan { background: #FBEAEA; color: #A32E2E; }
+.badge--tersedia   { background: #EDF7F0; color: #2F7A4D; }
+.badge--habis      { background: #FBEAEA; color: #A32E2E; }
+
+/* Divider struk */
+.divider-dashed {
+    border-top: 1px dashed rgba(243, 168, 187, 0.7);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--c-secondary); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--c-primary); }
+
+/* Print */
+@media print {
+    .no-print, aside, header, footer, .btn, form { display: none !important; }
+    body { background: #fff !important; color: #000 !important; }
+}
