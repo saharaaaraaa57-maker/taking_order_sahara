@@ -6,7 +6,7 @@ include 'includes/header.php';
 ?>
 <main class="min-h-screen flex items-center justify-center px-6 py-10">
     <div class="w-full max-w-5xl grid md:grid-cols-2 gap-12 items-center">
-
+    
         <!-- Branding -->
         <section class="hidden md:block">
             <img src="<?= asset('logo-brand.png'); ?>" alt="<?= BRAND_NAME; ?>" class="brand-logo--lg mb-6">

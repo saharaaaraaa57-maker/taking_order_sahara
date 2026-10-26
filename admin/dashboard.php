@@ -12,7 +12,6 @@ $recent = mysqli_query($koneksi, "SELECT o.*, p.nama FROM orders o
                                   ORDER BY o.waktu_order DESC LIMIT 5");
 
 include '../includes/header.php';
-include 'includes/sidebar_admin.php';
 ?>
 <div class="flex min-h-screen">
     <?php include 'includes/sidebar_admin.php'; ?>

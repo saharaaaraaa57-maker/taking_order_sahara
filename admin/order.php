@@ -3,7 +3,6 @@ require_once '../config/koneksi.php';
 requireAdmin();
 $judul = "Data Order — " . BRAND_NAME;
 include '../includes/header.php';
-include 'includes/sidebar_admin.php';
 
 $filter = $_GET['status'] ?? '';
 $where  = "";
@@ -24,6 +23,7 @@ $tabs = [
 ];
 ?>
 <div class="flex min-h-screen">
+       <?php include 'includes/sidebar_admin.php'; ?>
     <div class="flex-1 min-w-0">
         <?php include 'includes/topbar_admin.php'; ?>
         <main class="p-6 lg:p-8">

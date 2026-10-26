@@ -3,7 +3,6 @@ require_once '../config/koneksi.php';
 requireAdmin();
 $judul = "Laporan Order — " . BRAND_NAME;
 include '../includes/header.php';
-include 'includes/sidebar_admin.php';
 
 $tgl_awal  = $_GET['tgl_awal']  ?? date('Y-m-01');
 $tgl_akhir = $_GET['tgl_akhir'] ?? date('Y-m-d');
@@ -22,6 +21,7 @@ while ($row = mysqli_fetch_assoc($q)) {
 }
 ?>
 <div class="flex min-h-screen">
+      <?php include 'includes/sidebar_admin.php'; ?>
     <div class="flex-1 min-w-0">
         <?php include 'includes/topbar_admin.php'; ?>
         <main class="p-6 lg:p-8">

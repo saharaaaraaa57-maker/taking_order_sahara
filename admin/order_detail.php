@@ -26,6 +26,7 @@ if (!$o) { header("Location: order.php"); exit; }
 $qd = mysqli_query($koneksi, "SELECT * FROM order_detail WHERE order_id = $id");
 ?>
 <div class="flex min-h-screen">
+       <?php include 'includes/sidebar_admin.php'; ?>
     <div class="flex-1 min-w-0">
         <?php include 'includes/topbar_admin.php'; ?>
         <main class="p-6 lg:p-8">

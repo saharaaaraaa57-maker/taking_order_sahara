@@ -5,7 +5,6 @@ $judul = "Kelola Menu — " . BRAND_NAME;
 
 $q = mysqli_query($koneksi, "SELECT * FROM menu ORDER BY kategori, nama_menu");
 include '../includes/header.php';
-include 'includes/sidebar_admin.php';
 ?>
 <div class="flex min-h-screen">
     <?php include 'includes/sidebar_admin.php'; ?>

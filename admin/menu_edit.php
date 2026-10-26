@@ -43,9 +43,9 @@ if (isPost()) {
 }
 
 include '../includes/header.php';
-include 'includes/sidebar_admin.php';
 ?>
 <div class="flex min-h-screen">
+    <?php include 'includes/sidebar_admin.php'; ?>
     <div class="flex-1 min-w-0">
         <?php include 'includes/topbar_admin.php'; ?>
         <main class="p-6 lg:p-8">
