@@ -15,7 +15,6 @@ if (isPost()) {
 
 $judul = "Detail Order — " . BRAND_NAME;
 include '../includes/header.php';
-include 'includes/sidebar_admin.php';
 
 $q = mysqli_query($koneksi, "SELECT o.*, p.nama, p.no_hp FROM orders o
                              JOIN pelanggan p ON o.pelanggan_id = p.id
